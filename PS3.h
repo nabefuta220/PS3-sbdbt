@@ -2,28 +2,15 @@
 #ifndef PS3_H
 #define PS3_H
 #include <mbed.h>
-// bit,button
-/*
-#define sikaku 16  // 00010000
-#define sankaku 36 // 00100100
-#define batu 37    // 00100101
-#define maru 38    // 00100110
-#define ue 32      // 00100000
-#define sita 33    // 00100001
-#define migi 34    // 00100010
-#define hidari 35  // 00100011
-#define L1 17      // 00010001
-#define L2 18      // 00010010
-#define R1 19      // 00010011
-#define R2 20      // 00010100
-*/
+
 #define PI 3.141592654
 
 /**
  * handle PS3 for Mbed OS6
  **/
-class PS3 : public UnbufferedSerial,public Ticker {
+class PS3 : public UnbufferedSerial {
 public:
+// bit,button
   enum Button_type {
     sikaku = 16,  // 00010000
     sankaku = 36, // 00100100
@@ -89,7 +76,7 @@ public:
   int getRightJoystickXaxis();
   /**
    * get right joystick's Y axis
-   * @return value of right joystick's Y axis (take between -64 and 63)
+   * @return value of right joystick's Y axis (take between -63 and 64)
    **/
   int getRightJoystickYaxis();
   /**
@@ -99,7 +86,7 @@ public:
   int getLeftJoystickXaxis();
   /**
    * get left joystick's Y axis
-   * @return value of left joystick's Y axis (take between -64 and 63)
+   * @return value of left joystick's Y axis (take between -63 and 64)
    **/
   int getLeftJoystickYaxis();
 

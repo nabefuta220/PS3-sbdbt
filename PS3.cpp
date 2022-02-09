@@ -4,14 +4,14 @@
 void PS3::getdata() {
   char read_data;
   if (UnbufferedSerial::readable()) {
-  UnbufferedSerial::read(&read_data, 1);
-  /*
-    while (UnbufferedSerial::read(&read_data, 1),read_data != 0x80 ) {
-    }
-    */
+
+
+    while (UnbufferedSerial::read(&read_data, 1), read_data != 0x80)
+      ;
+
     for (int i = 1; i < 8; i++) {
       UnbufferedSerial::read(&read_data, 1);
-    
+
       PS3Data[i] = read_data;
     }
   }
@@ -32,12 +32,11 @@ PS3::PS3(PinName TX, PinName RX) : UnbufferedSerial(TX, RX) {
   UnbufferedSerial::baud(115200);
  // UnbufferedSerial::format(8,None,1);
 
-   
-  UnbufferedSerial::attach(Callback<void()>(this, &PS3::getdata),RxIrq);
+  UnbufferedSerial::attach(Callback<void()>(this, &PS3::getdata), RxIrq);
 }
 
 void PS3::myattach() {
-   UnbufferedSerial::attach(Callback<void()>(this, &PS3::getdata),RxIrq);
+  UnbufferedSerial::attach(Callback<void()>(this, &PS3::getdata), RxIrq);
 }
 
 void PS3::addattach(void (*Func)()) {
