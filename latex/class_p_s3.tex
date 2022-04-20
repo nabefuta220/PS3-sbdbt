@@ -1,0 +1,253 @@
+\hypertarget{class_p_s3}{}\doxysection{PS3 クラス}
+\label{class_p_s3}\index{PS3@{PS3}}
+
+
+{\ttfamily \#include $<$PS3.\+h$>$}
+
+PS3 の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_s3}
+\end{center}
+\end{figure}
+\doxysubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{Button\+\_\+type}} \{ \newline
+{\bfseries sikaku} = 16
+, {\bfseries sankaku} = 36
+, {\bfseries batu} = 37
+, {\bfseries maru} = 38
+, \newline
+{\bfseries ue} = 32
+, {\bfseries sita} = 33
+, {\bfseries migi} = 34
+, {\bfseries hidari} = 35
+, \newline
+{\bfseries L1} = 17
+, {\bfseries L2} = 18
+, {\bfseries R1} = 19
+, {\bfseries R2} = 20
+ \}
+\begin{DoxyCompactList}\small\item\em ボタンに対する列挙体 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_s3_a5d20ddd9583f21586d09fe7494cff1ec}{PS3}} (Pin\+Name TX, Pin\+Name RX)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_s3_ab53451c09c0cbd25da0e52d09a9646c1}\label{class_p_s3_ab53451c09c0cbd25da0e52d09a9646c1}} 
+void {\bfseries getdata} ()
+\begin{DoxyCompactList}\small\item\em PS3data にある\+PS3から送られているデータを読み取る \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_s3_a56e9049b2470b09e89380b630d9c03b8}\label{class_p_s3_a56e9049b2470b09e89380b630d9c03b8}} 
+void {\bfseries myattach} ()
+\begin{DoxyCompactList}\small\item\em 割込みを作成する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_s3_aaefed6cfa11840bf2f59dfa5fea9685b}{addattach}} (void($\ast$Func)())
+\begin{DoxyCompactList}\small\item\em PS3\+::getdataの後に割込む関数を追加する \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_s3_a7161540a56e8f20206f6a6058c3b7943}\label{class_p_s3_a7161540a56e8f20206f6a6058c3b7943}} 
+void {\bfseries nothing\+Func} ()
+\begin{DoxyCompactList}\small\item\em 何もしない関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_s3_a14bfe38d8fb168880837fcebac4a0038}{get\+Button\+State}} (\mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{Button\+\_\+type}} button)
+\begin{DoxyCompactList}\small\item\em ボタンが押されているかを調べる \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_s3_a4dd7882d45214a92661fab9fb119f5a6}{get\+SELECTState}} ()
+\begin{DoxyCompactList}\small\item\em セレクトボタンが押されているかを調べる \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_s3_afcf4c59975d3bb58889fb98f6c34f748}{get\+STARTState}} ()
+\begin{DoxyCompactList}\small\item\em スタートボタンが押されているかを調べる \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_s3_ad5f7cfb95503283387de94eae4352be2}{get\+Right\+Joystick\+Xaxis}} ()
+\begin{DoxyCompactList}\small\item\em 右ジョイコンスティックの\+X座標を取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_s3_adbe1e93c0226b88052fee41fa48aa411}{get\+Right\+Joystick\+Yaxis}} ()
+\begin{DoxyCompactList}\small\item\em 右ジョイコンスティックの\+Y座標を取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_s3_a58b8553aa0ab761ddc1f5562d4b723b0}{get\+Left\+Joystick\+Xaxis}} ()
+\begin{DoxyCompactList}\small\item\em 左ジョイコンスティックの\+X座標を取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_s3_a7b684f471b04dae5465418c48ea85314}{get\+Left\+Joystick\+Yaxis}} ()
+\begin{DoxyCompactList}\small\item\em 左ジョイコンスティックの\+Y座標を取得する \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_s3_a442b6174e637ad365e1b3a4d3dd9eca8}{get\+Right\+Joystick\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em 右ジョイコンスティックの角度(度数法で返す) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_s3_a483bfcdd3f1f4e8e0b1b09303f441447}{get\+Left\+Joystick\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em 左ジョイコンスティックの角度(度数法で返す) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_s3_a6650fbcce523b8b77a577fe3fe179473}\label{class_p_s3_a6650fbcce523b8b77a577fe3fe179473}} 
+void {\bfseries printdata} ()
+\begin{DoxyCompactList}\small\item\em PS3\+Dataの値をconsoleに出力する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Mbed OS6で\+PS3を使うクラス 
+
+\doxysubsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}\label{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}} 
+\index{PS3@{PS3}!Button\_type@{Button\_type}}
+\index{Button\_type@{Button\_type}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{Button\_type}{Button\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{PS3\+::\+Button\+\_\+type}}}
+
+
+
+ボタンに対する列挙体 
+
+PS3\+::sikaku のようにして使う 
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_p_s3_a5d20ddd9583f21586d09fe7494cff1ec}\label{class_p_s3_a5d20ddd9583f21586d09fe7494cff1ec}} 
+\index{PS3@{PS3}!PS3@{PS3}}
+\index{PS3@{PS3}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{PS3()}{PS3()}}
+{\footnotesize\ttfamily PS3\+::\+PS3 (\begin{DoxyParamCaption}\item[{Pin\+Name}]{TX,  }\item[{Pin\+Name}]{RX }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+指定した\+TXピンと\+TXピンで\+Unbuffered\+Serial ポートをつくる
+
+
+\begin{DoxyParams}{引数}
+{\em TX} & TXピン \\
+\hline
+{\em TX} & TXピン \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_p_s3_aaefed6cfa11840bf2f59dfa5fea9685b}\label{class_p_s3_aaefed6cfa11840bf2f59dfa5fea9685b}} 
+\index{PS3@{PS3}!addattach@{addattach}}
+\index{addattach@{addattach}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{addattach()}{addattach()}}
+{\footnotesize\ttfamily void PS3\+::addattach (\begin{DoxyParamCaption}\item[{void($\ast$)()}]{Func }\end{DoxyParamCaption})}
+
+
+
+PS3\+::getdataの後に割込む関数を追加する 
+
+
+\begin{DoxyParams}{引数}
+{\em Func} & PS3\+::getdataの後に割込む関数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_s3_a14bfe38d8fb168880837fcebac4a0038}\label{class_p_s3_a14bfe38d8fb168880837fcebac4a0038}} 
+\index{PS3@{PS3}!getButtonState@{getButtonState}}
+\index{getButtonState@{getButtonState}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getButtonState()}{getButtonState()}}
+{\footnotesize\ttfamily bool PS3\+::get\+Button\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{Button\+\_\+type}}}]{button }\end{DoxyParamCaption})}
+
+
+
+ボタンが押されているかを調べる 
+
+
+\begin{DoxyParams}{引数}
+{\em ボタンが押されているかを調べるボタン(例} & PS3\+::maru,PS3\+::ur,PS3\+::sita,PS3\+::\+L1 ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定したボタンが押されている場合\+True、指定したボタンが押されていないとき\+False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_a483bfcdd3f1f4e8e0b1b09303f441447}\label{class_p_s3_a483bfcdd3f1f4e8e0b1b09303f441447}} 
+\index{PS3@{PS3}!getLeftJoystickAngle@{getLeftJoystickAngle}}
+\index{getLeftJoystickAngle@{getLeftJoystickAngle}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getLeftJoystickAngle()}{getLeftJoystickAngle()}}
+{\footnotesize\ttfamily double PS3\+::get\+Left\+Joystick\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+左ジョイコンスティックの角度(度数法で返す) 
+
+\begin{DoxyReturn}{戻り値}
+左ジョイコンスティックの角度(-\/180.\+0以上180.0以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_a58b8553aa0ab761ddc1f5562d4b723b0}\label{class_p_s3_a58b8553aa0ab761ddc1f5562d4b723b0}} 
+\index{PS3@{PS3}!getLeftJoystickXaxis@{getLeftJoystickXaxis}}
+\index{getLeftJoystickXaxis@{getLeftJoystickXaxis}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getLeftJoystickXaxis()}{getLeftJoystickXaxis()}}
+{\footnotesize\ttfamily int PS3\+::get\+Left\+Joystick\+Xaxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+左ジョイコンスティックの\+X座標を取得する 
+
+\begin{DoxyReturn}{戻り値}
+左ジョイコンスティックの\+X座標(-\/64以上63以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_a7b684f471b04dae5465418c48ea85314}\label{class_p_s3_a7b684f471b04dae5465418c48ea85314}} 
+\index{PS3@{PS3}!getLeftJoystickYaxis@{getLeftJoystickYaxis}}
+\index{getLeftJoystickYaxis@{getLeftJoystickYaxis}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getLeftJoystickYaxis()}{getLeftJoystickYaxis()}}
+{\footnotesize\ttfamily int PS3\+::get\+Left\+Joystick\+Yaxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+左ジョイコンスティックの\+Y座標を取得する 
+
+\begin{DoxyReturn}{戻り値}
+左ジョイコンスティックの\+Y座標(-\/63以上64以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_a442b6174e637ad365e1b3a4d3dd9eca8}\label{class_p_s3_a442b6174e637ad365e1b3a4d3dd9eca8}} 
+\index{PS3@{PS3}!getRightJoystickAngle@{getRightJoystickAngle}}
+\index{getRightJoystickAngle@{getRightJoystickAngle}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getRightJoystickAngle()}{getRightJoystickAngle()}}
+{\footnotesize\ttfamily double PS3\+::get\+Right\+Joystick\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ジョイコンスティックの角度(度数法で返す) 
+
+\begin{DoxyReturn}{戻り値}
+右ジョイコンスティックの角度(-\/180.\+0以上180.0以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_ad5f7cfb95503283387de94eae4352be2}\label{class_p_s3_ad5f7cfb95503283387de94eae4352be2}} 
+\index{PS3@{PS3}!getRightJoystickXaxis@{getRightJoystickXaxis}}
+\index{getRightJoystickXaxis@{getRightJoystickXaxis}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getRightJoystickXaxis()}{getRightJoystickXaxis()}}
+{\footnotesize\ttfamily int PS3\+::get\+Right\+Joystick\+Xaxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ジョイコンスティックの\+X座標を取得する 
+
+\begin{DoxyReturn}{戻り値}
+右ジョイコンスティックの\+X座標(-\/64以上63以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_adbe1e93c0226b88052fee41fa48aa411}\label{class_p_s3_adbe1e93c0226b88052fee41fa48aa411}} 
+\index{PS3@{PS3}!getRightJoystickYaxis@{getRightJoystickYaxis}}
+\index{getRightJoystickYaxis@{getRightJoystickYaxis}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getRightJoystickYaxis()}{getRightJoystickYaxis()}}
+{\footnotesize\ttfamily int PS3\+::get\+Right\+Joystick\+Yaxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ジョイコンスティックの\+Y座標を取得する 
+
+\begin{DoxyReturn}{戻り値}
+右ジョイコンスティックの\+Y座標(-\/63以上64以下の数値) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_a4dd7882d45214a92661fab9fb119f5a6}\label{class_p_s3_a4dd7882d45214a92661fab9fb119f5a6}} 
+\index{PS3@{PS3}!getSELECTState@{getSELECTState}}
+\index{getSELECTState@{getSELECTState}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getSELECTState()}{getSELECTState()}}
+{\footnotesize\ttfamily bool PS3\+::get\+SELECTState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+セレクトボタンが押されているかを調べる 
+
+\begin{DoxyReturn}{戻り値}
+セレクトボタンが押されている場合\+True、セレクトボタンが押されていないとき\+False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_s3_afcf4c59975d3bb58889fb98f6c34f748}\label{class_p_s3_afcf4c59975d3bb58889fb98f6c34f748}} 
+\index{PS3@{PS3}!getSTARTState@{getSTARTState}}
+\index{getSTARTState@{getSTARTState}!PS3@{PS3}}
+\doxysubsubsection{\texorpdfstring{getSTARTState()}{getSTARTState()}}
+{\footnotesize\ttfamily bool PS3\+::get\+STARTState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スタートボタンが押されているかを調べる 
+
+\begin{DoxyReturn}{戻り値}
+スタートボタンが押されている場合\+True、スタートボタンが押されていないとき\+False 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+PS3.\+h\item 
+PS3.\+cpp\end{DoxyCompactItemize}

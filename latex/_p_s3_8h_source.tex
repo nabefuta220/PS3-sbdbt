@@ -1,0 +1,53 @@
+\hypertarget{_p_s3_8h_source}{}\doxysection{PS3.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef PS3\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define PS3\_H}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <mbed.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PI 3.141592654}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_p_s3}{PS3}} : \textcolor{keyword}{public} UnbufferedSerial \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \textcolor{keyword}{enum} \mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{Button\_type}} \{}
+\DoxyCodeLine{20         sikaku  = 16,  \textcolor{comment}{// 00010000}}
+\DoxyCodeLine{21         sankaku = 36,  \textcolor{comment}{// 00100100}}
+\DoxyCodeLine{22         batu    = 37,  \textcolor{comment}{// 00100101}}
+\DoxyCodeLine{23         maru    = 38,  \textcolor{comment}{// 00100110}}
+\DoxyCodeLine{24         ue      = 32,  \textcolor{comment}{// 00100000}}
+\DoxyCodeLine{25         sita    = 33,  \textcolor{comment}{// 00100001}}
+\DoxyCodeLine{26         migi    = 34,  \textcolor{comment}{// 00100010}}
+\DoxyCodeLine{27         hidari  = 35,  \textcolor{comment}{// 00100011}}
+\DoxyCodeLine{28         L1      = 17,  \textcolor{comment}{// 00010001}}
+\DoxyCodeLine{29         L2      = 18,  \textcolor{comment}{// 00010010}}
+\DoxyCodeLine{30         R1      = 19,  \textcolor{comment}{// 00010011}}
+\DoxyCodeLine{31         R2      = 20   \textcolor{comment}{// 00010100}}
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_p_s3_a5d20ddd9583f21586d09fe7494cff1ec}{PS3}}(PinName TX, PinName RX);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_s3_ab53451c09c0cbd25da0e52d09a9646c1}{getdata}}();}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_s3_a56e9049b2470b09e89380b630d9c03b8}{myattach}}();}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_s3_aaefed6cfa11840bf2f59dfa5fea9685b}{addattach}}(\textcolor{keywordtype}{void} (*Func)());}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_s3_a7161540a56e8f20206f6a6058c3b7943}{nothingFunc}}();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_p_s3_a14bfe38d8fb168880837fcebac4a0038}{getButtonState}}(\mbox{\hyperlink{class_p_s3_a4ee60aa87ed568d5b0a50399c1b0daab}{Button\_type}} button);}
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_p_s3_a4dd7882d45214a92661fab9fb119f5a6}{getSELECTState}}();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_p_s3_afcf4c59975d3bb58889fb98f6c34f748}{getSTARTState}}();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_s3_ad5f7cfb95503283387de94eae4352be2}{getRightJoystickXaxis}}();}
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_s3_adbe1e93c0226b88052fee41fa48aa411}{getRightJoystickYaxis}}();}
+\DoxyCodeLine{127     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_s3_a58b8553aa0ab761ddc1f5562d4b723b0}{getLeftJoystickXaxis}}();}
+\DoxyCodeLine{135     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_s3_a7b684f471b04dae5465418c48ea85314}{getLeftJoystickYaxis}}();}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{144     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_p_s3_a442b6174e637ad365e1b3a4d3dd9eca8}{getRightJoystickAngle}}();}
+\DoxyCodeLine{152     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_p_s3_a483bfcdd3f1f4e8e0b1b09303f441447}{getLeftJoystickAngle}}();}
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_s3_a6650fbcce523b8b77a577fe3fe179473}{printdata}}();}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{keyword}{private}:}
+\DoxyCodeLine{160     \textcolor{keywordtype}{char} PS3Data[8];}
+\DoxyCodeLine{161     void (*fpFunc)();}
+\DoxyCodeLine{162     \textcolor{keywordtype}{bool} addflag;}
+\DoxyCodeLine{163 \};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
